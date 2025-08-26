@@ -1,0 +1,231 @@
+// Styles for App.css
+const AppStyles = `
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f3f4f6;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+`;
+
+// Styles for Login.css
+const LoginStyles = `
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.login-form {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-form h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  color: #1f2937;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.login-button:hover {
+  background-color: #1d4ed8;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+`;
+
+// Styles for Dashboard.css
+const DashboardStyles = `
+.dashboard-container {
+  background-color: #f3f4f6;
+  min-height: 100vh;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 1.5rem;
+}
+
+.dashboard-container h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.kpis-section {
+  display: flex;
+  justify-content: space-around;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.charts-section,
+.users-section {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 1rem;
+  }
+}
+`;
+
+// Styles for KpiCard.css
+const KpiCardStyles = `
+.kpi-card {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 1.5rem 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  width: calc(33.333% - 1.5rem);
+  min-width: 250px;
+  gap: 1.5rem;
+  flex-grow: 1;
+}
+
+.kpi-icon {
+  font-size: 2rem;
+}
+
+.kpi-details h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4b5563;
+  margin: 0;
+}
+
+.kpi-details span {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+@media (max-width: 768px) {
+  .kpi-card {
+    width: 100%;
+  }
+}
+`;
+
+// Styles for UserList.css
+const UserListStyles = `
+.user-list-container h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.user-item {
+  background-color: #f9fafb;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.user-name {
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.user-role {
+  background-color: #e5e7eb;
+  color: #4b5563;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+}
+`;
+
+// Styles for UserChart.css
+const UserChartStyles = `
+.chart-container {
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+`;

@@ -1,0 +1,149 @@
+.chart-container {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.chart-container p {
+    text-align: center;
+    color: #64748b;
+    font-size: 1.1rem;
+    margin-top: 100px;
+}
+
+/* Chart.js customization */
+.chart-container canvas {
+    max-height: 400px !important;
+}
+
+/* Large Desktop */
+@media (min-width: 1400px) {
+    .chart-container {
+        height: 500px;
+    }
+    
+    .chart-container canvas {
+        max-height: 500px !important;
+    }
+    
+    .chart-container p {
+        font-size: 1.2rem;
+        margin-top: 120px;
+    }
+}
+
+/* Desktop */
+@media (max-width: 1399px) and (min-width: 1024px) {
+    .chart-container {
+        height: 450px;
+    }
+    
+    .chart-container canvas {
+        max-height: 450px !important;
+    }
+    
+    .chart-container p {
+        font-size: 1.15rem;
+        margin-top: 110px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .chart-container {
+        height: 400px;
+    }
+    
+    .chart-container canvas {
+        max-height: 400px !important;
+    }
+    
+    .chart-container p {
+        font-size: 1.1rem;
+        margin-top: 100px;
+    }
+}
+
+/* Mobile Large */
+@media (max-width: 767px) {
+    .chart-container {
+        height: 350px;
+    }
+    
+    .chart-container canvas {
+        max-height: 350px !important;
+    }
+    
+    .chart-container p {
+        font-size: 1rem;
+        margin-top: 80px;
+    }
+}
+
+/* Mobile Small */
+@media (max-width: 480px) {
+    .chart-container {
+        height: 300px;
+    }
+    
+    .chart-container canvas {
+        max-height: 300px !important;
+    }
+    
+    .chart-container p {
+        font-size: 0.95rem;
+        margin-top: 70px;
+    }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+    .chart-container {
+        height: 250px;
+    }
+    
+    .chart-container canvas {
+        max-height: 250px !important;
+    }
+    
+    .chart-container p {
+        font-size: 0.9rem;
+        margin-top: 60px;
+    }
+}
+
+/* Landscape Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .chart-container {
+        height: 250px;
+    }
+    
+    .chart-container canvas {
+        max-height: 250px !important;
+    }
+    
+    .chart-container p {
+        font-size: 0.9rem;
+        margin-top: 50px;
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .chart-container canvas {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .chart-container {
+        height: auto;
+        page-break-inside: avoid;
+    }
+    
+    .chart-container canvas {
+        max-height: none !important;
+    }
+}

@@ -1,0 +1,230 @@
+.kpi-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 16px;
+    padding: 24px;
+    color: white;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-width: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.kpi-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.kpi-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.kpi-card:hover::before {
+    opacity: 1;
+}
+
+.kpi-icon {
+    font-size: 2.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.kpi-details {
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.kpi-details h3 {
+    margin: 0 0 8px 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.kpi-details span {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    display: block;
+    line-height: 1;
+}
+
+/* Large Desktop */
+@media (min-width: 1400px) {
+    .kpi-card {
+        padding: 32px;
+        gap: 20px;
+    }
+    
+    .kpi-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 3rem;
+    }
+    
+    .kpi-details h3 {
+        font-size: 1rem;
+    }
+    
+    .kpi-details span {
+        font-size: 2.5rem;
+    }
+}
+
+/* Desktop */
+@media (max-width: 1399px) and (min-width: 1024px) {
+    .kpi-card {
+        padding: 28px;
+        gap: 18px;
+    }
+    
+    .kpi-icon {
+        width: 65px;
+        height: 65px;
+        font-size: 2.8rem;
+    }
+    
+    .kpi-details span {
+        font-size: 2.2rem;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .kpi-card {
+        padding: 24px;
+        gap: 16px;
+    }
+    
+    .kpi-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2.5rem;
+    }
+    
+    .kpi-details span {
+        font-size: 2rem;
+    }
+}
+
+/* Mobile Large */
+@media (max-width: 767px) {
+    .kpi-card {
+        padding: 20px;
+        gap: 14px;
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .kpi-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 2.2rem;
+    }
+    
+    .kpi-details h3 {
+        font-size: 0.85rem;
+        margin-bottom: 6px;
+    }
+    
+    .kpi-details span {
+        font-size: 1.8rem;
+    }
+}
+
+/* Mobile Small */
+@media (max-width: 480px) {
+    .kpi-card {
+        padding: 18px;
+        gap: 12px;
+        border-radius: 12px;
+    }
+    
+    .kpi-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+    }
+    
+    .kpi-details h3 {
+        font-size: 0.8rem;
+        margin-bottom: 4px;
+    }
+    
+    .kpi-details span {
+        font-size: 1.6rem;
+    }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+    .kpi-card {
+        padding: 16px;
+        gap: 10px;
+        border-radius: 10px;
+    }
+    
+    .kpi-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.8rem;
+    }
+    
+    .kpi-details h3 {
+        font-size: 0.75rem;
+    }
+    
+    .kpi-details span {
+        font-size: 1.4rem;
+    }
+}
+
+/* Landscape Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .kpi-card {
+        padding: 16px;
+        gap: 12px;
+    }
+    
+    .kpi-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.8rem;
+    }
+    
+    .kpi-details h3 {
+        font-size: 0.8rem;
+        margin-bottom: 4px;
+    }
+    
+    .kpi-details span {
+        font-size: 1.5rem;
+    }
+}

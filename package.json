@@ -1,0 +1,25 @@
+{
+  "name": "team-dashboard",
+  "version": "1.0.0",
+  "description": "A modern team dashboard application with React frontend and Node.js backend",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run install-all && npm run build"
+  },
+  "keywords": ["dashboard", "team", "react", "node", "express", "mongodb"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "workspaces": [
+    "client",
+    "server"
+  ]
+}
